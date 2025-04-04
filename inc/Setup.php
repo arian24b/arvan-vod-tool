@@ -201,7 +201,7 @@ class Setup {
 	public function load_plugin_textdomain() {
 
 		load_plugin_textdomain(
-			'arvancloud-vod',
+			'arvan-vod-tool',
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);
@@ -213,8 +213,8 @@ class Setup {
 		if ( defined('ACVOD_PLUGIN_STATUS') && ACVOD_PLUGIN_STATUS ) {
 
 			add_menu_page(
-				__( 'ArvanCloud Videos', 'arvancloud-vod' ),
-				__( 'Arvan VoD', 'arvancloud-vod'),
+				__( 'ArvanCloud Videos', 'arvan-vod-tool' ),
+				__( 'Arvan VoD', 'arvan-vod-tool'),
 				'manage_options',
 				'arvancloud-vod-video-lib',
 				[$this, 'video_lib_page'],
@@ -224,8 +224,8 @@ class Setup {
 
 			add_submenu_page(
 				'arvancloud-vod-video-lib',
-				__( 'ArvanCloud Videos', 'arvancloud-vod' ),
-				__( 'Video Library', 'arvancloud-vod'),
+				__( 'ArvanCloud Videos', 'arvan-vod-tool' ),
+				__( 'Video Library', 'arvan-vod-tool'),
 				'manage_options',
 				'arvancloud-vod-video-lib',
 				[$this, 'video_library_page'],
@@ -233,8 +233,8 @@ class Setup {
 
 			add_submenu_page(
 				'arvancloud-vod-video-lib',
-				__( 'Upload New Video', 'arvancloud-vod' ),
-				__( 'Add New Video', 'arvancloud-vod' ),
+				__( 'Upload New Video', 'arvan-vod-tool' ),
+				__( 'Add New Video', 'arvan-vod-tool' ),
 				'manage_options',
 				'arvancloud-vod-new-video',
 				[$this, 'new_video_page'],
@@ -242,8 +242,8 @@ class Setup {
 
 			add_submenu_page(
 				'arvancloud-vod-video-lib',
-				__( 'Settings', 'arvancloud-vod' ),
-				__( 'Settings', 'arvancloud-vod' ),
+				__( 'Settings', 'arvan-vod-tool' ),
+				__( 'Settings', 'arvan-vod-tool' ),
 				'manage_options',
 				'arvancloud-vod',
 				[$this, 'settings_page'],
@@ -251,8 +251,8 @@ class Setup {
 
 			add_submenu_page(
 				'arvancloud-vod-video-lib',
-				__( 'About ArvanCloud', 'arvancloud-vod' ),
-				__( 'About', 'arvancloud-vod' ),
+				__( 'About ArvanCloud', 'arvan-vod-tool' ),
+				__( 'About', 'arvan-vod-tool' ),
 				'manage_options',
 				'arvancloud-vod' . '-about',
 				[$this, 'about_us_page'],
@@ -260,8 +260,8 @@ class Setup {
 
 			add_submenu_page(
 				'',
-				__( 'Video Single', 'arvancloud-vod' ),
-				__( 'Video Single', 'arvancloud-vod' ),
+				__( 'Video Single', 'arvan-vod-tool' ),
+				__( 'Video Single', 'arvan-vod-tool' ),
 				'manage_options',
 				'arvancloud-vod-single-video',
 				[$this, 'single_video'],
@@ -270,8 +270,8 @@ class Setup {
 		} else {
 
 			add_menu_page(
-				__( 'ArvanCloud Videos', 'arvancloud-vod' ),
-				__( 'Arvan VoD', 'arvancloud-vod'),
+				__( 'ArvanCloud Videos', 'arvan-vod-tool' ),
+				__( 'Arvan VoD', 'arvan-vod-tool'),
 				'manage_options',
 				'arvancloud-vod',
 				[$this, 'settings_page'],
@@ -281,8 +281,8 @@ class Setup {
 
 			add_submenu_page(
 				'arvancloud-vod',
-				__( 'Settings', 'arvancloud-vod' ),
-				__( 'Settings', 'arvancloud-vod' ),
+				__( 'Settings', 'arvan-vod-tool' ),
+				__( 'Settings', 'arvan-vod-tool' ),
 				'manage_options',
 				'arvancloud-vod',
 				[$this, 'settings_page'],
@@ -290,8 +290,8 @@ class Setup {
 
 			add_submenu_page(
 				'arvancloud-vod',
-				__( 'About ArvanCloud', 'arvancloud-vod' ),
-				__( 'About', 'arvancloud-vod' ),
+				__( 'About ArvanCloud', 'arvan-vod-tool' ),
+				__( 'About', 'arvan-vod-tool' ),
 				'manage_options',
 				'arvancloud-vod' . '-about',
 				[$this, 'about_us_page'],
@@ -357,11 +357,11 @@ class Setup {
 
 		// Page content
 		echo '<div class="wrap">';
-		echo '<h1>' . esc_html__('ArvanCloud Video Library', 'arvancloud-vod') . '</h1>';
+		echo '<h1>' . esc_html__('ArvanCloud Video Library', 'arvan-vod-tool') . '</h1>';
 		echo '<div class="arvan-video-library-container">';
 
 		// Display video library content here
-		echo '<p>' . esc_html__('Your video library content will display here.', 'arvancloud-vod') . '</p>';
+		echo '<p>' . esc_html__('Your video library content will display here.', 'arvan-vod-tool') . '</p>';
 
 		echo '</div>'; // End of .arvan-video-library-container
 		echo '</div>'; // End of .wrap
@@ -426,7 +426,7 @@ class Setup {
 		check_ajax_referer('arvancloud_vod_nonce', 'nonce');
 
 		if (!current_user_can('manage_options')) {
-			wp_send_json_error(['message' => __('You do not have permission to perform this action', 'arvancloud-vod')]);
+			wp_send_json_error(['message' => __('You do not have permission to perform this action', 'arvan-vod-tool')]);
 			return;
 		}
 
@@ -446,7 +446,7 @@ class Setup {
 
 		wp_send_json_success([
 			'message' => sprintf(
-				__('Sync completed: %d imported, %d skipped, %d errors', 'arvancloud-vod'),
+				__('Sync completed: %d imported, %d skipped, %d errors', 'arvan-vod-tool'),
 				$result['imported'],
 				$result['skipped'],
 				$result['errors']
@@ -469,7 +469,7 @@ class Setup {
 		check_ajax_referer('arvancloud_vod_nonce', 'nonce');
 
 		if (!current_user_can('manage_options')) {
-			wp_send_json_error(['message' => __('You do not have permission to perform this action', 'arvancloud-vod')]);
+			wp_send_json_error(['message' => __('You do not have permission to perform this action', 'arvan-vod-tool')]);
 			return;
 		}
 
@@ -478,7 +478,7 @@ class Setup {
 
 		wp_send_json_success([
 			'debug_info' => $debug_info,
-			'message' => __('Debug information retrieved successfully', 'arvancloud-vod')
+			'message' => __('Debug information retrieved successfully', 'arvan-vod-tool')
 		]);
 	}
 
@@ -490,7 +490,7 @@ class Setup {
 		check_ajax_referer('arvancloud_vod_nonce', 'nonce');
 
 		if (!current_user_can('manage_options')) {
-			wp_send_json_error(['message' => __('You do not have permission to perform this action', 'arvancloud-vod')]);
+			wp_send_json_error(['message' => __('You do not have permission to perform this action', 'arvan-vod-tool')]);
 			return;
 		}
 

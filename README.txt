@@ -1,23 +1,23 @@
-=== ArvanCloud VOD for Wordpress ===
-Contributors: arvancloud, khorshidlab
+=== Arvan VOD Tool ===
+Contributors: arian24b
 Tags: VOD, arvancloud
 Requires at least: 4.0
 Tested up to: 6.1
 Requires PHP: 7.0
-Stable tag: 1.0.1
+Stable tag: 1.0.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-ArvanCloud VOD for Wordpress
+Arvan VOD Tool for Wordpress
 
 == Description ==
-ArvanCloud VOD for Wordpress
+Arvan VOD Tool for Wordpress
 
 == Installation ==
 = Using The WordPress Dashboard =
 
 1. Navigate to the Add New in the plugins dashboard
-2. Search for ArvanCloud VOD
+2. Search for Arvan VOD Tool
 3. Click Install Now
 4. Activate the plugin on the Plugin dashboard
 
@@ -25,15 +25,15 @@ ArvanCloud VOD for Wordpress
 
 1. Navigate to the Add New in the plugins dashboard
 2. Navigate to the Upload area
-3. Select arvancloud-vod.zip from your computer
+3. Select arvan-vod-tool.zip from your computer
 4. Click Install Now
 5. Activate the plugin in the Plugin dashboard
 
 = Using FTP =
 
-1. Download arvancloud-vod.zip
-2. Extract the arvancloud-vod directory to your computer
-3. Upload the arvancloud-vod directory to the /wp-content/plugins/ directory
+1. Download arvan-vod-tool.zip
+2. Extract the arvan-vod-tool directory to your computer
+3. Upload the arvan-vod-tool directory to the /wp-content/plugins/ directory
 4. Activate the plugin in the Plugin dashboard
 
 == Screenshots ==
@@ -44,6 +44,9 @@ ArvanCloud VOD for Wordpress
 5. ArvanCloud VOD for Block Editor
 
 == Changelog ==
+= 1.0.0 - 2024-05-19 =
+* Initial release
+
 = 1.0.1 - 2025-02-19 =
 * Introduce new user interface
 * Some minor improvements

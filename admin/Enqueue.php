@@ -1,13 +1,13 @@
 <?php
 
 /**
- * ArvanCloud_VOD
+ * Arvan_VOD_Tool
  *
- * @package   ArvanCloud_VOD
- * @author    Khorshid, ArvanCloud <{{author_email}}>
- * @copyright {{author_copyright}}
+ * @package   Arvan_VOD_Tool
+ * @author    Arian Omrani <info@arian24.com>
+ * @copyright 2024 Arian Omrani
  * @license   GPL-3.0+
- * @link      https://www.arvancloud.ir/en/products/video-platform
+ * @link      https://github.com/arian24b/arvan-vod-tool
  */
 
 namespace WP_Arvan\Admin;
@@ -74,12 +74,12 @@ class Enqueue {
 			$strings['warnDelete'] = __("You are about to permanently delete this item from your site.\nAlso, you are deleting this video from your local storage, this video is still available on Arvan Video Platform Storage.\nThis action cannot be undone.\n 'Cancel' to stop, 'OK' to delete.",'arvancloud-vod');
 			return $strings;
 		});
-        
+
         \add_action( 'admin_head', array( $this, 'admin_head' ) );
 
 
 	}
-    
+
     public function admin_head(){
 		$screen = get_current_screen() ;
         if((isset($_GET['page']) and $_GET['page']=='arvancloud-vod-videos-add')or ($screen->action == 'add' and $screen->base == 'media')){
@@ -89,20 +89,20 @@ class Enqueue {
                     $chanel .= "<option value=\"{$channel['id']}\">{$channel['title']}</option>";
                 }
             }
-            
+
         ?>
         <script type="text/javascript">
         var option_channel = '<?php echo $chanel; ?>';
         </script>
         <?php
         }
-		
+
 		if(get_post_type() == 'post'){
 		?>
         <style>
         .editor-styles-wrapper{border:1px solid silver;padding:10px !important;}
         </style>
-        <?php			
+        <?php
 		}
 
     }
@@ -139,7 +139,7 @@ class Enqueue {
 
 	public function enqueue_styles() {
 		\wp_enqueue_style( 'arvancloud-vod' . '-front-styles', \plugins_url( 'assets/css/front.css', ACVOD_PLUGIN_ABSOLUTE ), array(), ACVOD_VERSION );
-		
+
 	}
 
 	/**
@@ -149,56 +149,56 @@ class Enqueue {
 	 * @return void
 	 */
 	public function enqueue_admin_scripts() {
-		
+
 		$screen = \get_current_screen();
 
 		\wp_enqueue_script(
-			'arvancloud-vod' . '-admin-scripts',
+			'arvan-vod-tool' . '-admin-scripts',
 			\plugins_url( 'assets/js/admin.js', ACVOD_PLUGIN_ABSOLUTE ),
 			array( 'jquery', 'media-grid', 'media' ),
 			ACVOD_VERSION,
 			true
 		);
 
-		
+
 		$translate = [
-			'Upload video to arvan'=>__('Upload video to arvan','arvancloud-vod'),
-			'Ready to upload the file'=>__('Ready to upload the file','arvancloud-vod'),
-			'File address'=>__('File address','arvancloud-vod'),
-			'File name'=>__('File name','arvancloud-vod'),
-			'Short description'=>__('Short description','arvancloud-vod'),
-			'Video tags'=>__('Video tags','arvancloud-vod'),
-			'Transfer to the channel'=>__('Transfer to the channel','arvancloud-vod'),
-			'You can choose 5 tags'=>__('You can choose 5 tags','arvancloud-vod'),
-			'Output type'=>__('Output type','arvancloud-vod'),
-			'Determine with what quality the face was ready for display.'=>__('Determine with what quality the face was ready for display.','arvancloud-vod'),
-			'Automatically'=>__('Automatically','arvancloud-vod'),
-			'Manually'=>__('Manually','arvancloud-vod'),
-			'As a profile'=>__('As a profile','arvancloud-vod'),
-			'Video type'=>__('Video type','arvancloud-vod'),
-			'Vertical mode'=>__('Vertical mode','arvancloud-vod'),
-			'Image resolution'=>__('Image resolution','arvancloud-vod'),
-			'Horizontal mode'=>__('Horizontal mode','arvancloud-vod'),
-			'From 144p to 1080p quality'=>__('From 144p to 1080p quality','arvancloud-vod'),
-			'From 144p to 1080p quality'=>__('From 144p to 1080p quality','arvancloud-vod'),
-			'resolution'=>__('resolution','arvancloud-vod'),
-			'Image bitrate'=>__('Image bitrate','arvancloud-vod'),
-			'Audio bitrate'=>__('Audio bitrate','arvancloud-vod'),
-			'Select'=>__('Select','arvancloud-vod'),
-			'Cancel'=>__('Cancel','arvancloud-vod'),
-			'Begin upload video'=>__('Begin upload video','arvancloud-vod'),
-			'Do you want delete this resulation?','arvancloud-vod'=>__('Do you want delete this resulation?','arvancloud-vod'),
-			'Please select a channel'=>__('Please select a channel','arvancloud-vod'),
-			'Please select a resulation'=>__('Please select a resulation','arvancloud-vod'),
-			'Please select a profile'=>__('Please select a profile','arvancloud-vod'),
-			'File ID not found','arvancloud-vod'=>__('File ID not found','arvancloud-vod'),
-			'Upload video to arvan successfull.'=>__('Upload video to arvan successfull.','arvancloud-vod'),
-			'Error upload video to arvan server'=>__('Error upload video to arvan server','arvancloud-vod'),
-			'Do you want cancel upload this video?'=>__('Do you want cancel upload this video?','arvancloud-vod'),
+			'Upload video to arvan'=>__('Upload video to arvan','arvan-vod-tool'),
+			'Ready to upload the file'=>__('Ready to upload the file','arvan-vod-tool'),
+			'File address'=>__('File address','arvan-vod-tool'),
+			'File name'=>__('File name','arvan-vod-tool'),
+			'Short description'=>__('Short description','arvan-vod-tool'),
+			'Video tags'=>__('Video tags','arvan-vod-tool'),
+			'Transfer to the channel'=>__('Transfer to the channel','arvan-vod-tool'),
+			'You can choose 5 tags'=>__('You can choose 5 tags','arvan-vod-tool'),
+			'Output type'=>__('Output type','arvan-vod-tool'),
+			'Determine with what quality the face was ready for display.'=>__('Determine with what quality the face was ready for display.','arvan-vod-tool'),
+			'Automatically'=>__('Automatically','arvan-vod-tool'),
+			'Manually'=>__('Manually','arvan-vod-tool'),
+			'As a profile'=>__('As a profile','arvan-vod-tool'),
+			'Video type'=>__('Video type','arvan-vod-tool'),
+			'Vertical mode'=>__('Vertical mode','arvan-vod-tool'),
+			'Image resolution'=>__('Image resolution','arvan-vod-tool'),
+			'Horizontal mode'=>__('Horizontal mode','arvan-vod-tool'),
+			'From 144p to 1080p quality'=>__('From 144p to 1080p quality','arvan-vod-tool'),
+			'From 144p to 1080p quality'=>__('From 144p to 1080p quality','arvan-vod-tool'),
+			'resolution'=>__('resolution','arvan-vod-tool'),
+			'Image bitrate'=>__('Image bitrate','arvan-vod-tool'),
+			'Audio bitrate'=>__('Audio bitrate','arvan-vod-tool'),
+			'Select'=>__('Select','arvan-vod-tool'),
+			'Cancel'=>__('Cancel','arvan-vod-tool'),
+			'Begin upload video'=>__('Begin upload video','arvan-vod-tool'),
+			'Do you want delete this resulation?','arvan-vod-tool'=>__('Do you want delete this resulation?','arvan-vod-tool'),
+			'Please select a channel'=>__('Please select a channel','arvan-vod-tool'),
+			'Please select a resulation'=>__('Please select a resulation','arvan-vod-tool'),
+			'Please select a profile'=>__('Please select a profile','arvan-vod-tool'),
+			'File ID not found','arvan-vod-tool'=>__('File ID not found','arvan-vod-tool'),
+			'Upload video to arvan successfull.'=>__('Upload video to arvan successfull.','arvan-vod-tool'),
+			'Error upload video to arvan server'=>__('Error upload video to arvan server','arvan-vod-tool'),
+			'Do you want cancel upload this video?'=>__('Do you want cancel upload this video?','arvan-vod-tool'),
 		];
 
 		if( (isset($_GET['page']) &&  strstr($_GET['page'], 'arvancloud-vod-videos') != false)or ($screen->action == 'add' and $screen->base == 'media') ){
-			
+
 			\wp_enqueue_script(
 				'arvancloud-vod' . '-tagify',
 				\plugins_url( 'assets/js/tagify.min.js', ACVOD_PLUGIN_ABSOLUTE ),
@@ -206,27 +206,27 @@ class Enqueue {
 				ACVOD_VERSION,
 				true
 			);
-			
+
 			\wp_register_script(
-				'arvancloud-vod' . '-upload-vod-redirect',
+				'arvan-vod-tool' . '-upload-vod-redirect',
 				plugins_url( 'assets/js/vod_upload.js', ACVOD_PLUGIN_ABSOLUTE ),
 				array( 'jquery', 'media-grid', 'media', 'plupload','wp-i18n' ),
 				ACVOD_VERSION,
 				true
 			);
-			wp_localize_script('arvancloud-vod' . '-upload-vod-redirect','json_string',$translate);
-			wp_enqueue_script( 'arvancloud-vod' . '-upload-vod-redirect' );
-			wp_set_script_translations( 'arvancloud-vod' . '-upload-vod-redirect', 'arvancloud-vod', plugin_dir_path( dirname(__FILE__) ) . 'languages');
+			wp_localize_script('arvan-vod-tool' . '-upload-vod-redirect','json_string',$translate);
+			wp_enqueue_script( 'arvan-vod-tool' . '-upload-vod-redirect' );
+			wp_set_script_translations( 'arvan-vod-tool' . '-upload-vod-redirect', 'arvan-vod-tool', plugin_dir_path( dirname(__FILE__) ) . 'languages');
 
 		}
 		wp_localize_script(
-			'arvancloud-vod' . '-admin-scripts',
+			'arvan-vod-tool' . '-admin-scripts',
 			'AR_VOD',
 			array(
 				'videoGallery' => \admin_url( 'admin.php?page=arvancloud-vod-videos' ),
 				'strings'	  => array(
-					'video_upload_error' => __( 'you are not allowed to upload this file type.', 'arvancloud-vod' ),
-					'copy_to_vod' => __( 'Copy to ArvanVOD', 'arvancloud-vod' ),
+					'video_upload_error' => __( 'you are not allowed to upload this file type.', 'arvan-vod-tool' ),
+					'copy_to_vod' => __( 'Copy to ArvanVOD', 'arvan-vod-tool' ),
 				),
 				'nonces'  => array(
 					'get_attachment_provider_details' => wp_create_nonce( 'get-attachment-vod-details' ),
@@ -239,7 +239,7 @@ class Enqueue {
 
 		if ( $screen->id === 'videos_page_arvancloud-vod-videos-add' ||
 			get_locale() == 'fa_IR' && explode('_', $screen->id)[0] == '%d9%88%db%8c%d8%af%d8%a6%d9%88%d9%87%d8%a7' ) {
-			
+
 			\wp_enqueue_script(
 				'arvancloud-vod' . '-upload-scripts',
 				\plugins_url( 'assets/js/vod_upload.js', ACVOD_PLUGIN_ABSOLUTE ),
@@ -249,7 +249,7 @@ class Enqueue {
 			);
 			wp_localize_script('arvancloud-vod' . '-upload-scripts','json_string_item',$translate);
 		}
-        
+
 
 
 
