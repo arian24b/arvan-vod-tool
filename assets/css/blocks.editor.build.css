@@ -1,0 +1,29 @@
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+.wp-block-r1c-vod-select {
+  background-color: #20c5ba;
+  border-radius: 12px;
+  color: #fff;
+  margin: 0 auto;
+  max-width: 740px;
+  padding: 1rem;
+  text-align: center; }
+
+button.r1c-replace-video {
+  border: 1px solid #2271b1;
+  border-radius: 2px;
+  color: #2271b1;
+  background: #f6f7f7; }
+
+button.r1c-remove-video {
+  margin: 0 10px !important; }

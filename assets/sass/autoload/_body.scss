@@ -1,0 +1,101 @@
+:root {
+  --white: #fff;
+  --primary-text-color: #4C4C4C;
+  --primary-text-light-color: #7F7F7F;
+  --primary-text-dark-color: #333333;
+  --secondary-text-color: #465A71;
+  --secondary-text-dark-color: #344456;
+  --secondary-text-extra-dark-color: #253343;
+  --primary-color: #009595;
+  --primary-light-color: #E6F8F8;
+  --secondary-color: #00BABA;
+  --success-color: #17B24A;
+  --success-light-color: #E3F6E9;
+  --success-dark-color: #128E3B;
+  --danger-color: #EE5353;
+  --danger-dark-light: #D61E20;
+  --info-color: #0172B4;
+  --info-light-color: #E0F2FB;
+  --info-secondary-color: #D6EDFA;
+  --warning-color: #CA9602;
+  --warning-light-color: #FFF2CC;
+  --border-color-one: #CCCCCC;
+  --border-color-light: #0000001a;
+  --border-color-extra-light: #E9EDF5;
+  --border-color-card: #D1DBE8;
+}
+
+.arvan-vod-wrapper {
+  font-family: 'yekan-bakh';
+  margin-bottom: 43px;
+
+  * {
+    font-family: 'yekan-bakh';
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--primary-text-color);
+  }
+
+  .text-dark {
+    color: var(--primary-text-dark-color);
+  }
+
+  .text-bold {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+  }
+
+  .text-normal {
+    font-size: 12px !important;
+    font-weight: 400 !important;
+  }
+
+  a {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--primary-color);
+  }
+
+  .flex-column {
+    flex-direction: column;
+  }
+
+  .flex-row {
+    flex-direction: row;
+  }
+
+  .justify-content-center {
+    justify-content: center;
+  }
+
+  .align-items-center {
+    align-items: center;
+  }
+
+  .mb-0 {
+    margin-bottom: 0;
+  }
+  
+  .mt-0 {
+    margin-top: 0;
+  }
+
+  .mr-0 {
+    margin-right: 0;
+  }
+
+  .ml-0 {
+    margin-left: 0;
+  }
+
+  .mr-8 {
+    margin-right: 8px;
+  }
+
+  .ml-8 {
+    margin-left: 8px;
+  }
+}

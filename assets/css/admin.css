@@ -1,0 +1,231 @@
+#toplevel_page_arvancloud-vod img {
+	width: 50%;
+}
+.arvan-vod-wrapper {
+	max-width: 1232px;
+	width: 100%;
+}
+.arvan-vod-card {
+	max-width: 1232px;
+	width: calc(100% - 48px);
+	background: #fff;
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 24px;
+	margin-bottom: 20px;
+}
+.arvan-vod-card .ar-box {
+	width: 390px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.toplevel_page_arvancloud-vod input[name="acvod-api-key"] {
+	width: 325px;
+	text-align: left;
+	direction: ltr;
+}
+.acs-footer {
+	background-color: #062026;
+	border-radius: 5px;
+	padding: 15px;
+	display: flex;
+	align-items: center;
+}
+.acs-footer .acs-footer-links {
+	width: 70%;
+	float: left;
+}
+.acs-footer .acs-footer-links ul {
+	width: 100%;
+}
+.acs-footer .acs-footer-links ul li {
+	display: inline-block;
+	margin-inline-end: 15px;
+	margin-bottom: 0;
+}
+.acs-footer .acs-footer-links ul li a {
+	color: #7ce8dd;
+	opacity: 0.6;
+}
+.acs-footer .acs-footer-social {
+	width: 30%;
+	float: right;
+}
+.acs-footer .acs-footer-social .footer__social-icons {
+	float: right;
+	width: 250px;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	text-align: left;
+	direction: ltr;
+	flex-direction: row;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+.acs-footer
+	.acs-footer-social
+	.footer__social-icons
+	.footer__social-icons__link {
+	display: block;
+}
+.acs-footer
+	.acs-footer-social
+	.footer__social-icons
+	.footer__social-icons__link
+	svg {
+	width: 30px;
+	height: 30px;
+}
+.arvancloud-vod-config-form .get-api-key {
+	display: block;
+	width: 100%;
+	text-align: right;
+	margin-top: 10px;
+}
+.arvan-vod_page_arvancloud-vod-videos-add .drag-drop #drag-drop-area {
+	border: 4px dashed #00baba;
+	height: 200px;
+}
+.toplevel_page_arvancloud-vod-videos .mode-grid .media-sidebar {
+	position: relative;
+	width: auto;
+	margin-top: 12px;
+	padding: 0 16px;
+	border-left: 4px solid #d63638;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+	background-color: #fff;
+}
+.toplevel_page_arvancloud-vod-videos .mode-grid .hide-sidebar .media-sidebar {
+	display: none;
+}
+.toplevel_page_arvancloud-vod-videos .wp-filter {
+	display: inline-block;
+	position: relative;
+	box-sizing: border-box;
+	margin: 12px 0 25px;
+	padding: 0 10px;
+	width: 100%;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+	border: 1px solid #c3c4c7;
+	background: #fff;
+	color: #50575e;
+	font-size: 13px;
+}
+.toplevel_page_arvancloud-vod-videos #attachment-filter,
+.toplevel_page_arvancloud-vod-videos #media-attachment-filters {
+	display: none;
+}
+.acvod-code-snippet {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	padding: 0.5rem;
+	text-align: left;
+	margin: 10px 0;
+	cursor: pointer;
+	border-radius: 1rem;
+	border: 1px solid #e9edf5;
+	direction: ltr;
+}
+.acvod-code-snippet h4 {
+	margin-top: 0;
+}
+.acvod-code-snippet pre {
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	word-wrap: break-word;
+	width: 100%;
+	margin: 0;
+}
+.acvod-code-snippet .code_snippet_data {
+	font-size: 10px;
+	font-weight: 400;
+	margin-bottom: 0 !important;
+	word-break: break-all;
+	text-align: left;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-direction: column;
+}
+.acvod-code-snippet .acvod-copy-code {
+	position: relative;
+	color: #00baba;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.5rem;
+	height: 2.5rem;
+	background-color: #e6f8f8;
+	margin-right: 0.5rem;
+	border-radius: 0.75rem;
+	flex: none;
+	cursor: pointer;
+}
+.acvod-code-snippet .acvod-copy-code .c-vodCopyButton__copyIcon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: scale(1) translate(-50%, -50%);
+	opacity: 1;
+	transition: all 0.15s ease-in-out;
+}
+.acvod-code-snippet .acvod-copy-code .c-vodCopyButton__checkIcon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transition: all 0.15s ease-in-out;
+}
+.acvod-code-snippet .acvod-copy-code .c-vodCopyButton__checkIcon,
+.acvod-code-snippet .acvod-copy-code .c-vodCopyButton__copyIcon--hide {
+	opacity: 0;
+	transform: scale(0.8) translate(-50%, -50%);
+}
+.acvod-code-snippet .acvod-copy-code .c-vodCopyButton__checkIcon--show {
+	opacity: 1;
+	transform: scale(1) translate(-50%, -50%);
+}
+#toplevel_page_arvancloud-vod-videos img {
+	width: 50%;
+}
+
+/* Spinner animation for sync button */
+.arvicon.spinner {
+	display: inline-block;
+	animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/* Sync notification styles */
+#sync-notification {
+	transition: all 0.3s ease;
+}
+
+.mr-8 {
+	margin-right: 8px;
+}
+
+.secondary {
+	background-color: #e7e7e7;
+	color: #333;
+}
+
+.secondary:hover {
+	background-color: #d7d7d7;
+}

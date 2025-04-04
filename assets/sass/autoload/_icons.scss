@@ -1,0 +1,63 @@
+.arvicon {
+  display: block;
+  mask-size: 100% !important;
+  width: 13px;
+  height: 13px;
+  background-color: var(--primary-color);
+
+  &.search {
+    mask: url("../images/icons/search.svg") no-repeat center;
+  }
+
+  &.plus {
+    mask: url("../images/icons/plus.svg") no-repeat center;    
+  }
+
+  &.arrow-left {
+    mask: url("../images/icons/arrow-left.svg") no-repeat center;
+  }
+
+  &.arrow-down {
+    mask: url("../images/icons/arrow-down.svg") no-repeat center;
+  }
+
+  &.blank {
+    mask: url("../images/icons/blank.svg") no-repeat center;
+  }
+
+  &.close {
+    mask: url("../images/icons/close.svg") no-repeat center;
+  }
+
+  &.copy {
+    mask: url("../images/icons/copy.svg") no-repeat center;
+  }
+
+  &.play-circle {
+    mask: url("../images/icons/play-circle.svg") no-repeat center;
+  }
+
+  &.play {
+    mask: url("../images/icons/play.svg") no-repeat center;
+  }
+
+  &.success {
+    mask: url("../images/icons/success.svg") no-repeat center;
+  }
+
+  &.upload {
+    mask: url("../images/icons/upload.svg") no-repeat center;
+  }
+
+  &.user-circle {
+    mask: url("../images/icons/user-circle.svg") no-repeat center;
+  }
+
+  &.chevron-right {
+    mask: url("../images/icons/chevron-right.svg") no-repeat center;
+  }
+
+  &.chevron-left {
+    mask: url("../images/icons/chevron-left.svg") no-repeat center;
+  }
+}

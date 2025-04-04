@@ -1,0 +1,110 @@
+.arv-vod-table {
+  table {
+    width: 100%;
+
+    thead {      
+      tr {
+        display: flex;
+        margin-bottom: 12px;
+
+        th {
+          color: var(--secondary-text-extra-dark-color);
+          font-weight: 700;
+
+          &:nth-child(1) {
+            flex: 0.5;
+          }
+
+          &:nth-child(2) {
+            flex: 1;
+          }
+
+          &:nth-child(3) {
+            flex: 5;
+          }
+
+          &:nth-child(4) {
+            flex: 2;
+          }
+
+          &:nth-child(5) {
+            flex: 2;
+          }
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        display: flex;
+        align-items: center;
+        border: 1px solid var(--border-color-extra-light);
+        padding: 12px 17px;
+        border-radius: 16px;
+        margin-bottom: 8px;
+
+        td {
+          color: var(--secondary-text-dark-color);
+          font-weight: 400;
+
+          &:nth-child(1) {
+            flex: 0.5;
+          }
+
+          &:nth-child(2) {
+            flex: 2;                    
+          }
+
+          &:nth-child(3) {
+            flex: 5;
+            width: 100%;
+            overflow: hidden;
+
+            p {
+              font-size: 14px !important;
+              font-weight: 400 !important;
+              color: var(--secondary-text-dark-color);         
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+            }
+          }
+
+          &:nth-child(4) {
+            flex: 3;
+            display: flex;
+            justify-content: end;
+          }
+
+          &:nth-child(5) {
+            flex: 2;
+            display: flex;
+            justify-content: end;
+          }
+        }
+      }
+    }
+
+    .vod-btn {
+      &.primary {
+        max-width: 93px;
+      }
+
+      &.secondary {
+        max-width: 131px;
+        margin-left: 27px;
+      }
+    }
+  }
+
+  &__id {
+    background: #f5f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    color: var(--secondary-text-dark-color);
+    max-width: 26px;
+    min-height: 26px;
+  }
+}

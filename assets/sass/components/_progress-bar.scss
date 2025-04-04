@@ -1,0 +1,119 @@
+.vod-progress-bar {
+  margin: 14px 0 0;
+  display: flex;
+  align-items: center;
+  background: #F5F7FA;
+  padding: 0 10px 0 30px;
+  border-radius: 12px;
+  min-height: 43px;
+
+  &__percent {
+    color: var(--info-color);
+    margin-left: 14px;
+    font-weight: 700;
+  }
+
+  &__area {
+    display: flex;
+    width: 100%;
+    height: 8px;
+    background: var(--info-secondary-color);
+    border-radius: 50px;
+  }
+
+  &__fill {
+    width: 75%;
+    height: 100%;
+    background: var(--info-color);
+    border-radius: 50px;
+  }
+
+  &__details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+
+    &-waiting {
+      display: flex;
+      align-items: center;
+
+      &--text {
+        color: var(--primary-text-dark-color);
+
+        span {
+          color: var(--primary-text-light-color);
+          margin-right: 4px;
+        }
+      }
+    }
+
+    &-duration {
+      display: flex;
+
+      &--title {
+        color: var(--primary-text-light-color);
+        margin-left: 4px;
+      }
+
+      &--value {
+        color: var(--primary-text-dark-color);
+        font-weight: 700;
+      }
+    }
+
+    .circle-wrap {
+      margin: 0 0 0 8px;
+      width: 20px;
+      height: 20px;
+      background: #fefcff;
+      border-radius: 50%;
+      box-shadow: inset 0 0 0 3px #7fb8d9;
+      position: relative;
+    }
+    
+    .circle-wrap .circle .mask,
+    .circle-wrap .circle .fill {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      border-radius: 50%;
+    }
+    
+    .circle-wrap .circle .mask {
+      clip: rect(0px, 20px, 20px, 10px);
+    }
+    
+    .circle-wrap .inside-circle {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: var(--white);
+      text-align: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      z-index: 100;
+    }
+
+    .mask .fill {
+      clip: rect(0px, 20px, 20px, 0);
+      background-color: #0172b4;
+    }
+    
+    .mask.full,
+    .circle .fill {
+      animation: fill ease-in-out 3s;
+      transform: rotate(-155deg);
+    }
+    
+    @keyframes fill{
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(-155deg);
+      }
+    }
+  }
+}

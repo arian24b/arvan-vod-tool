@@ -1,0 +1,25 @@
+{
+    "name": "khorshid/wp-encrypt",
+    "description": "Encrypts and decrypts data using the WordPress SALT and OpenSSL",
+    "keywords": ["encrypt", "encryption", "decrypt", "decryption", "wp-encrypt"],
+    "license": ["GPL-3.0-or-later"],
+  
+    "authors": [
+      {
+        "name": "Khorshid",
+        "email": "info@khorshidlab.com",
+        "homepage": "https://khorshidlab.com/"
+      }
+    ],
+  
+    "require": {
+      "php": ">=5.6"
+    },
+  
+    "autoload": {
+      "psr-4": {
+        "WP_Encryption\\": "src/"
+      }
+    }
+  }
+  

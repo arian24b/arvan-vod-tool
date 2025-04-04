@@ -1,0 +1,68 @@
+.arvvod-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  border: 1px solid var(--border-color-extra-light);
+  border-radius: 12px;
+  padding: 4px;
+  margin: 24px 0;
+
+  &__next,
+  &__prev {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+
+    .arvicon {
+      width: 5px;
+      background-color: #566E88;
+    }
+  }
+
+  &__next {
+    margin-left: 8px;
+  }
+
+  &__prev {
+    margin-right: 8px;
+  }
+
+  &__list {
+    &-ul {
+      display: flex;
+      align-items: center;
+      margin: 0 !important;
+
+      &--li {
+        margin-bottom: 0;
+      }
+
+      &--a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        width: 24px;
+        height: 24px;
+        font-weight: 400 !important;
+        border-radius: 8px;
+        color: #566E88 !important;
+        font-size: 11px !important;
+
+        &.active {
+          background-color: var(--border-color-extra-light);
+          color: var(--secondary-text-extra-dark-color);
+          font-weight: 500 !important;
+        }
+
+        &:hover {
+          background-color: #F5F7FA;
+          color: var(--secondary-text-extra-dark-color);
+          font-weight: 500 !important;
+        }
+      }
+    }
+  }
+}

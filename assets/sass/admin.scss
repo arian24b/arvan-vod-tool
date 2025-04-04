@@ -1,0 +1,232 @@
+#toplevel_page_arvancloud-vod img {
+    width: 50%;
+}
+
+.arvan-vod-wrapper {
+    max-width: 1232px;
+    width: 100%;
+}
+
+.arvan-vod-card {
+    max-width: 1232px;
+    width: calc(100% - 48px);
+    background: #fff;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 24px;
+    margin-bottom: 20px;
+
+	.ar-box {
+		width: 390px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+
+.toplevel_page_arvancloud-vod {
+	input[name=acvod-api-key] {
+		width: 325px;
+		text-align: left;
+		direction: ltr;
+	}
+}
+
+.acs-footer {
+    background-color: #062026;
+    border-radius: 5px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+
+	.acs-footer-links {
+		width: 70%;
+		float: left;
+
+		ul {
+			width: 100%;
+
+			li {
+				display: inline-block;
+				margin-inline-end: 15px;
+				margin-bottom: 0;
+
+				a {
+					color: #7ce8dd;
+					opacity: .6;
+				}
+			}
+		}
+	}
+
+	.acs-footer-social {
+		width: 30%;
+		float: right;
+
+		.footer__social-icons {
+			float: right;
+			width: 250px;
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: row;
+			text-align: left;
+			direction: ltr;
+			flex-direction: row;
+			-webkit-box-pack: justify;
+			-ms-flex-pack: justify;
+			justify-content: space-between;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+
+			.footer__social-icons__link {
+				display: block;
+
+				svg {
+					width: 30px;
+					height: 30px;
+				}
+			}
+		}
+	}
+}
+
+.arvancloud-vod-config-form {
+	.get-api-key {
+		display: block;
+		width: 100%;
+		text-align: right;
+		margin-top: 10px;
+	}
+}
+
+.arvan-vod_page_arvancloud-vod-videos-add .drag-drop #drag-drop-area {
+    border: 4px dashed #00baba;
+    height: 200px;
+}
+
+.toplevel_page_arvancloud-vod-videos {
+	.mode-grid {
+		.media-sidebar {
+			position: relative;
+			width: auto;
+			margin-top: 12px;
+			padding: 0 16px;
+			border-left: 4px solid #d63638;
+			box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.10);
+			background-color: #fff;
+		}
+
+		.hide-sidebar .media-sidebar {
+			display: none;
+		}
+	}
+
+	.wp-filter {
+		display: inline-block;
+		position: relative;
+		box-sizing: border-box;
+		margin: 12px 0 25px;
+		padding: 0 10px;
+		width: 100%;
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+		border: 1px solid #c3c4c7;
+		background: #fff;
+		color: #50575e;
+		font-size: 13px;
+	}
+
+
+	#attachment-filter,
+	#media-attachment-filters {
+		display: none;
+	}
+}
+
+.acvod-code-snippet {
+	display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+	padding: 0.5rem;
+    text-align: left;
+	margin: 10px 0;
+	cursor: pointer;
+	border-radius: 1rem;
+    border: 1px solid #e9edf5;
+	direction: ltr;
+
+	h4 {
+		margin-top: 0;
+	}
+
+	pre {
+		white-space: pre-wrap;       /* Since CSS 2.1 */
+		white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+		white-space: -pre-wrap;      /* Opera 4-6 */
+		white-space: -o-pre-wrap;    /* Opera 7 */
+		word-wrap: break-word;       /* Internet Explorer 5.5+ */
+		width: 100%;
+		margin: 0;
+	}
+
+	.code_snippet_data {
+		font-size: 10px;
+		font-weight: 400;
+		margin-bottom: 0!important;
+		word-break: break-all;
+		text-align: left;
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+		flex-direction: column;
+	}
+
+	.acvod-copy-code {
+		position: relative;
+		color: #00baba;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 2.5rem;
+		height: 2.5rem;
+		background-color: #e6f8f8;
+		margin-right: 0.5rem;
+		border-radius: 0.75rem;
+		flex: none;
+		cursor: pointer;
+
+		.c-vodCopyButton__copyIcon {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: scale(1) translate(-50%,-50%);
+			opacity: 1;
+			transition: all .15s ease-in-out;
+		}
+
+		.c-vodCopyButton__checkIcon {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transition: all .15s ease-in-out;
+		}
+
+		.c-vodCopyButton__checkIcon, .c-vodCopyButton__copyIcon--hide {
+			opacity: 0;
+			transform: scale(.8) translate(-50%,-50%);
+		}
+
+		.c-vodCopyButton__checkIcon--show {
+			opacity: 1;
+			transform: scale(1) translate(-50%,-50%);
+		}
+	}
+
+}
+
+#toplevel_page_arvancloud-vod-videos {
+	img {
+		width: 50%;
+	}
+}
